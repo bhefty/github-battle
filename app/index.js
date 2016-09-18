@@ -9,8 +9,12 @@ let sentryURL = 'https://' + sentryKey + '@sentry.io/' + sentryApp
 
 let _APP_INFO = {
   name: 'Github Battle',
-  branch: 'video4',
+  branch: 'video12',
   version: '1.0'
+}
+
+window.onerror = function () {
+  Raven.showReportDialog()
 }
 
 Raven.config(sentryURL, {
